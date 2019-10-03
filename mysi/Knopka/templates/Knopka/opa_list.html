@@ -1,0 +1,9 @@
+{% extends "Knopka/wrapper.html" %}
+
+{% block content %}
+  {% for ity in object_list %}
+    <a href="{% url "knopka:detail" pk=ity.pk %}"><h3>{{ity.name}}</h3></a>
+    <p>{{ity.text}}</p>
+    <h4>{{ity.date|date:"m-d-Y"}}</h4>
+  {% endfor %}
+{% endblock %}
